@@ -13,7 +13,7 @@ After you have installed Maven do the following:
 1. Clone this repository
 
    ```bash
-   git clone <https://github.com/LeoTuet/greenfoot-maven-starter>
+   git clone https://github.com/LeoTuet/greenfoot-maven-starter
    ```
 
 2. Open the project in your favorite IDE
