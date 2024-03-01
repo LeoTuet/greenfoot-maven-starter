@@ -3,7 +3,6 @@ package polyfill;
 import greenfoot.core.Simulation;
 import greenfoot.export.GreenfootScenarioViewer;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -13,11 +12,12 @@ public class GreenfootScenarioApplication extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Platform.setImplicitExit(true);
 		GreenfootScenarioViewer greenfootScenarioViewer = new GreenfootScenarioViewer();
 		Scene scene = new Scene(greenfootScenarioViewer);
+
 		primaryStage.setScene(scene);
 		primaryStage.show();
+
 		primaryStage.setOnHiding(e -> {
 			Simulation.getInstance().abort();
 
@@ -36,5 +36,4 @@ public class GreenfootScenarioApplication extends Application {
 			exiter.start();
 		});
 	}
-
 }

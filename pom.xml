@@ -11,6 +11,7 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
 
@@ -20,14 +21,14 @@
             <artifactId>greenfoot</artifactId>
             <version>3.8.2</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/greenfoot.jar</systemPath>
+            <systemPath>${pom.basedir}/libs/greenfoot.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.bluej</groupId>
             <artifactId>bluej</artifactId>
             <version>3.8.2</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/bluej.jar</systemPath>
+            <systemPath>${pom.basedir}/libs/bluej.jar</systemPath>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
         <dependency>
@@ -47,6 +48,18 @@
                 <configuration>
                     <mainClass>me.leotuet.Main</mainClass>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>debug</id>
+                        <configuration>
+                            <options>
+                                <option>
+                                    -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:5005
+                                </option>
+                            </options>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
