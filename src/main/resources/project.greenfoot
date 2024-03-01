@@ -1,6 +1,6 @@
 # Class definitions
 
-class.me.leotuet.actors.ILikeToMoveIt.image=bean.png
+class.me.leotuet.actors.Bean.image=bean.png
 
 # Editor Settings
 editor.fx.0.height=0

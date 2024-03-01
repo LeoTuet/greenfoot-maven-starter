@@ -2,7 +2,7 @@ package me.leotuet.worlds;
 
 // WARNING: This file is auto-generated and any changes to it will be overwritten
 import greenfoot.World;
-import me.leotuet.actors.ILikeToMoveIt;
+import me.leotuet.actors.Bean;
 
 /**
  * 
@@ -15,7 +15,7 @@ public class MyWorld extends World {
 	public MyWorld() {
 		super(600, 400, 1);
 
-		var iLikeToMoveIt = new ILikeToMoveIt();
-		addObject(iLikeToMoveIt, 300, 200);
+		var bean = new Bean();
+		addObject(bean, 300, 200);
 	}
 }

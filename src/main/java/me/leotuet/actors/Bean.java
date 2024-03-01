@@ -3,7 +3,7 @@ package me.leotuet.actors;
 import greenfoot.Actor;
 import greenfoot.Greenfoot;
 
-public class ILikeToMoveIt extends Actor {
+public class Bean extends Actor {
 	public void act() {
 		move();
 	}
